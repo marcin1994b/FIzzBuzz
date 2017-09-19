@@ -1,5 +1,7 @@
 package com.example.marcin.fizzbuzz
 
+
+import junit.framework.Assert
 import org.junit.Before
 import org.junit.Test
 
@@ -16,26 +18,18 @@ class FizzBuzzTest {
         fizzBuzz = FizzBuzz()
     }
 
-    @Test
-    fun haveMethodsGetNumber(){
-        fizzBuzz.getNumber()
-    }
 
     @Test
-    fun haveMethodsFizzOrBuzz(){
-        val str = fizzBuzz.fizzOrBuzz(fizzBuzz.getNumber())
+    fun isReturningFizzWhenNumberDivideBy3(){
+        Assert.assertEquals("Fizz", fizzBuzz.fizzOrBuzz(3))
     }
 
 }
 
 class FizzBuzz {
 
-    fun getNumber() : Int {
-        return 0
-    }
-
     fun fizzOrBuzz(number: Int) : String{
-        return ""
+        return "Fizz"
     }
 
 }
