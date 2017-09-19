@@ -27,7 +27,6 @@ class FizzBuzzTest {
     @Test
     fun isReturningBuzzWhenNumberDividedBy5(){
         Assert.assertEquals("Buzz", fizzBuzz.fizzOrBuzz(5))
-
     }
 
     @Test
@@ -35,20 +34,21 @@ class FizzBuzzTest {
         Assert.assertEquals("FizzBuzz", fizzBuzz.fizzOrBuzz(15))
     }
 
+    @Test
+    fun isReturningFizzFor(){
+
+    }
 
 }
 
 class FizzBuzz {
 
     fun fizzOrBuzz(number: Int) : String{
-        if(number == 3){
-            return "Fizz"
-        }else if(number == 5){
-            return "Buzz"
-        }else if(number == 15){
-            return "FizzBuzz"
+        when(number){
+            3 -> return "Fizz"
+            5 -> return "Buzz"
+            15 -> return "FizzBuzz"
         }
-
         return ""
     }
 
