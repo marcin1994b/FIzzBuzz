@@ -21,11 +21,21 @@ class FizzBuzzTest {
         fizzBuzz.getNumber()
     }
 
+    @Test
+    fun haveMethodsFizzOrBuzz(){
+        val str = fizzBuzz.fizzOrBuzz(fizzBuzz.getNumber())
+    }
+
 }
 
 class FizzBuzz {
 
-    fun getNumber() {
+    fun getNumber() : Int {
+        return 0
+    }
+
+    fun fizzOrBuzz(number: Int) : String{
+        return ""
     }
 
 }
