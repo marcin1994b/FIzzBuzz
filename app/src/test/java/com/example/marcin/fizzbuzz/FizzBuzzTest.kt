@@ -24,12 +24,24 @@ class FizzBuzzTest {
         Assert.assertEquals("Fizz", fizzBuzz.fizzOrBuzz(3))
     }
 
+    @Test
+    fun isReturningBuzzWhenNumberDividedBy5(){
+        Assert.assertEquals("Buzz", fizzBuzz.fizzOrBuzz(5))
+
+    }
+
 }
 
 class FizzBuzz {
 
     fun fizzOrBuzz(number: Int) : String{
-        return "Fizz"
+        if(number%3 == 0){
+            return "Fizz"
+        }else if(number%5 == 0){
+            return "Buzz"
+        }
+
+        return ""
     }
 
 }
