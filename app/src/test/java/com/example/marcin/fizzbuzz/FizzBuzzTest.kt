@@ -30,14 +30,15 @@ class FizzBuzzTest {
 
     }
 
+
 }
 
 class FizzBuzz {
 
     fun fizzOrBuzz(number: Int) : String{
-        if(number%3 == 0){
+        if(number == 3){
             return "Fizz"
-        }else if(number%5 == 0){
+        }else if(number == 5){
             return "Buzz"
         }
 
